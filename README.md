@@ -4,5 +4,5 @@
 Here React Labs
 
 
-instructor / Mohamed Adel
-SuperVisor/Mina Nagy
+instructor / Mohamed Adel.
+SuperVisor/Mina Nagy.
