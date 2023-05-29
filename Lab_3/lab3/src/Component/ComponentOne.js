@@ -1,4 +1,3 @@
-// ComponentOne.js
 import React from 'react';
 import MyContext from './MyContext';
 import ComponentTwo from './ComponentTwo';

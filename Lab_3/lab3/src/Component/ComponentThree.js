@@ -1,4 +1,3 @@
-// ComponentThree.js
 import React from 'react';
 import MyContext from './MyContext';
 

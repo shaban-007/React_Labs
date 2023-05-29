@@ -12,12 +12,12 @@ class PostForm extends Component {
   }
 
   handleSubmit = (e) => {
-    console.log("My name is Ahmed")
+    console.log("My name is Ahmed and check 1 is done")
     e.preventDefault();
 
     const postData = {
-        userId: this.state.UserId, 
-    title: this.state.title,
+      userId: this.state.UserId, 
+      title: this.state.title,
       body: this.state.body,
       
     };
@@ -31,9 +31,9 @@ class PostForm extends Component {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('Post created:', data);
+        console.log('created:', data);
         
-        this.setState({ title: '', body: '' });
+        this.setState({ UserId:'',title: '', body: '' });
       })
       .catch((error) => console.log(error));
   };
