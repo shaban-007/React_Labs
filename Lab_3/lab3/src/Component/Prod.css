@@ -1,0 +1,11 @@
+
+.Cart{
+    
+    flex-basis: 25%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
