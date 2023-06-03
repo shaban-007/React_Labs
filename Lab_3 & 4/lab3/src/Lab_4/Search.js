@@ -1,27 +1,35 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 
-const SearchPost = () => {
-  const [searchInput, setSearchInput] = useState('');
-  const [post, setPost] = useState(null);
+function Lab4_4_2() {
+    
+    const [post, setPost] = useState({});
+    const [userId, setuserId] = useState(1);
+    const [idFromBTN, setIdFromBTN] = useState(1)
 
-  const handleSearch = async () => {
-    try {
-      const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${searchInput}`);
-      const data = await response.json();
-      setPost(data);
-    } catch (error) {
-      console.error('Error fetching post:', error);
+    useEffect(() => {
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${userId}`)
+        .then(response => {
+            console.log(response);
+            setPost(response.data)
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }, [idFromBTN]);
+
+    const handeleClick = () => {
+        setIdFromBTN(userId)
     }
-  };
+
 
   return (
     <div>
-      <h2>Search Post by ID</h2>
-      <input type="text" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
-      <button onClick={handleSearch}>Search</button>
-      {post && <p>{post.title}</p>}
+        <input type="text" value={userId} onChange={e => setuserId(e.target.value)} />
+        <button onClick={handeleClick}>Search</button>
+        <h3>{post.title}</h3>
     </div>
-  );
-};
+  )
+}
 
-export default SearchPost;
+export default Lab4_4_2;

@@ -2,10 +2,13 @@ import React from 'react';
 import MyContext from './MyContext';
 
 const ComponentThree = () => {
+
+  const value = useContext(MyContext);
   return (
-    <MyContext.Consumer>
-      {(value) => <p>Data Shared in CompThree: {value}</p>}
-    </MyContext.Consumer>
+    <div>       
+            <p>Data Shared in CompThree: {value}</p>
+    </div>
+
   );
 };
 

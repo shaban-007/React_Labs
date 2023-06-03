@@ -26,9 +26,9 @@ function App() {
       {/* <FetchPosts></FetchPosts> */}
       {/* <Products></Products> */}
       {/* <SignLogin></SignLogin> */}
-      {/* <ComponentOne></ComponentOne> */}
+      <ComponentOne></ComponentOne>
       {/* <Posts /> */}
-      <SearchPost />
+      {/* <SearchPost /> */}
     </div>
   );
 }
